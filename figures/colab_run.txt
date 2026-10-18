@@ -1,0 +1,59 @@
+# Exp 133 Colab run evidence (excerpts copied from the sandbox session, 18 Oct 2026 UTC)
+
+## colab sessions (final, resumed run)
+[b8-133] gpu-l4-s-kkb-ass1b1-10xjkb5s7ozow | Hardware: L4 | Shape: Standard | Variant: GPU
+
+## VM software (setup.log, 09:17 UTC)
+vllm 0.31.0 / langgraph 1.1.10 / langgraph-checkpoint-sqlite 3.1.2 / openai 2.54.0 / torch 2.13.0 / transformers 5.17.0
+vllm server: Qwen/Qwen3-8B-FP8, --max-model-len 8192 --enable-auto-tool-choice --tool-call-parser hermes --enable-prefix-caching --max-num-seqs 48 --seed 0 --structured-outputs-config {"backend": "xgrammar", "disable_any_whitespace": true}
+
+## resume check on the VM (hash of the 2,231 rows uploaded; matches the sandbox copy)
+1b37422530da3dbcf730982fb92ac5216f378f77  results/runs_confirm.jsonl
+2231 results/runs_confirm.jsonl
+
+## pilot log
+0 done, 252 to run
+[07:28:38] 25/252 rows  elapsed 41s
+[07:28:47] 50/252 rows  elapsed 50s
+[07:28:55] 75/252 rows  elapsed 58s
+[07:29:06] 100/252 rows  elapsed 68s
+[07:29:16] 125/252 rows  elapsed 78s
+[07:29:26] 150/252 rows  elapsed 88s
+[07:29:34] 175/252 rows  elapsed 96s
+[07:29:45] 200/252 rows  elapsed 107s
+[07:29:53] 225/252 rows  elapsed 116s
+[07:30:10] 250/252 rows  elapsed 132s
+[07:30:16] 252/252 rows  elapsed 138s
+PHASE DONE pilot 138s
+EXIT 0
+
+## confirmatory driver log (resumed part)
+2231 done, 1549 to run
+[09:39:36] 25/1549 rows  elapsed 48s
+[09:39:45] 50/1549 rows  elapsed 56s
+...
+[09:49:33] 1525/1549 rows  elapsed 644s
+[09:49:52] 1549/1549 rows  elapsed 664s
+PHASE DONE confirm 664s
+EXIT 0
+
+## sandbox pull log
+08:39 1076 rows; [08:39:01] 1050/3780 rows  elapsed 433s
+08:42 1637 rows; [08:42:13] 1550/3780 rows  elapsed 625s
+08:46 2231 rows; [08:45:45] 2150/3780 rows  elapsed 838s
+09:40 2363 rows; [09:40:15] 125/1549 rows  elapsed 86s
+09:43 2849 rows; [09:43:18] 600/1549 rows  elapsed 269s
+09:47 3397 rows; [09:46:23] 1050/1549 rows  elapsed 454s
+09:50 3780 rows; EXIT 0
+
+## final local file
+3780 results/runs_confirm.jsonl
+21d1393f1accd53a6c999c08c1e4e608e71f96a0  results/runs_confirm.jsonl
+
+## compute units (colab usage)
+CU_start 131.81 Sun Oct 18 07:01:20 UTC 2026
+CU_before_session2 Current balance: 129.23 compute units Sun Oct 18 08:07:21 UTC 2026
+CU_before_session3 Current balance: 128.04 compute units Sun Oct 18 09:10:10 UTC 2026
+end: Current balance: 127.05 compute units (09:51 UTC, session stopped)
+
+Note: nvidia-smi output for the final VM was not captured (the last log-grab exec lost its connection right before 'colab stop'); the GPU type comes from 'colab sessions' above.

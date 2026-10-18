@@ -1,3 +1,7 @@
 08:39 1076 rows; [08:39:01] 1050/3780 rows  elapsed 433s
 08:42 1637 rows; [08:42:13] 1550/3780 rows  elapsed 625s
 08:46 2231 rows; [08:45:45] 2150/3780 rows  elapsed 838s
+09:40 2363 rows; [09:40:15] 125/1549 rows  elapsed 86s
+09:43 2849 rows; [09:43:18] 600/1549 rows  elapsed 269s
+09:47 3397 rows; [09:46:23] 1050/1549 rows  elapsed 454s
+09:50 3780 rows; EXIT 0

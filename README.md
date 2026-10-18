@@ -65,8 +65,8 @@ The pilot (P01-P12, 1 seed) is used only to check that faults fire, that all arc
 ## Files
 
 - `scripts/tasks.py` (task generator), `scripts/agent133.py` (platform mock, faults, 7 architectures, scorer), `scripts/run_phase.py` (resumable driver), `scripts/vm_setup.sh`, `scripts/vm_run.sh` (run on the Colab VM, detached), `scripts/stub_llm.py` (fake model for plumbing tests only), `scripts/analyze.py`, `scripts/figures.py`.
-- `results/tasks.json`, `results/runs_pilot.jsonl`, `results/runs_confirm.jsonl`, `results/summary.json`, `results/timing.json`.
+- `results/tasks.json`, `results/runs_pilot.jsonl`, `results/runs_confirm.jsonl`, `results/summary.json`, `results/timing.json`, `results/incident_double_driver.md` (run interruptions), `figures/` (fig1-3, table.png, table_archs.png, colab_run.txt), `writeup.md`, `blog.md`.
 
 ## Timing / compute
 
-To be filled in at the end (estimated vs actual minutes, GPU, CU).
+Timing: estimated 165 min, actual about 230 min (setup incl. GPU allocation waits 65, pilot 20, confirmatory GPU run 135 incl. two Colab VM losses, eval 5, writeup 25). GPU: NVIDIA L4 (Colab, three VMs in sequence). Compute: about 4.8 CU (balance 131.81 -> 127.05), under the 6 CU cap. Results: see writeup.md (H1 PROVEN; 7 of 8 hypotheses PROVEN, H6 DISPROVEN).

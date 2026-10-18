@@ -1,1 +1,7 @@
-{"estimated_minutes": {"setup": 35, "pilot": 20, "gpu_run": 60, "eval": 15, "writeup": 35, "total": 165}, "start_ist": "2026-10-18 11:45", "gpu": "L4 (planned)"}
+{"estimated_minutes": {"setup": 35, "pilot": 20, "gpu_run": 60, "eval": 15, "writeup": 35, "total": 165},
+ "start_ist": "2026-10-18 11:45", "end_ist": "2026-10-18 15:35",
+ "actual_minutes": {"setup_incl_gpu_allocation_waits": 65, "pilot_incl_vllm_fix_rerun": 20,
+                    "gpu_run_confirmatory_incl_two_vm_losses": 135, "eval": 5, "writeup": 25, "total": 230},
+ "gpu": "NVIDIA L4 (Colab), three VMs in sequence (two reclaimed by Colab mid-run)",
+ "colab_cu": "about 4.8 CU (balance 131.81 at 07:01 UTC -> 127.05 at 09:51 UTC; account-level, upper bound), under the 6 CU cap",
+ "pure_driver_seconds": {"pilot": 138, "confirmatory_final_resumed_part": 664}}

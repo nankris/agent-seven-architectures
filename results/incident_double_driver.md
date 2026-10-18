@@ -35,3 +35,8 @@
 - Resume (decided before looking at any confirmatory outcome): new L4 session, same code, model and server flags; the 2,231
   rows are uploaded and run_phase.py runs only the 1,549 missing (arch, task, seed, condition) jobs with ONE driver, 32
   workers, empty checkpoint dir. Runs in flight when the VM died left no row and are re-run from scratch.
+- 09:17 UTC: the fresh VM installed vLLM 0.31.0, which rejects `disable_any_whitespace` unless the structured-output
+  backend is named. Server flag changed to `{"backend": "xgrammar", "disable_any_whitespace": true}` (xgrammar is
+  vLLM's default first-choice backend; same intent as before). Model, sampling, agent and scoring code unchanged.
+  Rows written after this resume are tagged by file position (rows 2,232+ of runs_confirm.jsonl) so they can be
+  compared with the first 2,231 as a sanity check.
