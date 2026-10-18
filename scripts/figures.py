@@ -86,4 +86,23 @@ for (r, c), cell in tb.get_celld().items():
 ax.set_title(f"Exp 133: pre-registered hypotheses ({S['n_tasks']} fresh tasks x {len(S['seeds'])} seeds, 7 architectures x 3 conditions)",
              loc="left", fontsize=13, fontweight="bold")
 fig.tight_layout(); fig.savefig("figures/table.png", dpi=150); plt.close(fig)
+
+# table_archs.png: per-architecture results (rates in %, means per run)
+rows = []
+for a, lb in zip(ARCHS, LAB):
+    c, t, k = T[(a, "clean")], T[(a, "timeout")], T[(a, "crash")]
+    rows.append([lb, f"{c['success']*100:.0f}%", f"{t['success']*100:.0f}%", f"{k['success']*100:.0f}%",
+                 f"{t['dup']*100:.0f}%", f"{k['dup']*100:.0f}%", f"{c['calls']:.1f}", f"{c['ptok']:,.0f}", f"{c['lat']:.1f}"])
+fig, ax = plt.subplots(figsize=(14, 0.45 * len(rows) + 1.3)); ax.axis("off")
+tb = ax.table(cellText=rows, colLabels=["Architecture", "Success\nno fault", "Success\ntimeout", "Success\ncrash",
+              "Duplicate\ntimeout", "Duplicate\ncrash", "Model calls\n(no fault)", "Prompt tok\n(no fault)", "Latency s\n(no fault)"],
+              bbox=[0, 0, 1, 0.9], cellLoc="center", colWidths=[0.22] + [0.0975] * 8)
+tb.auto_set_font_size(False); tb.set_fontsize(11)
+for (r, c), cell in tb.get_celld().items():
+    cell.set_edgecolor(GRID)
+    if r == 0: cell.set_text_props(fontweight="bold"); cell.set_facecolor("#ecebe7"); cell.set_height(cell.get_height() * 1.4)
+    if c == 0 and r > 0: cell.set_text_props(ha="left")
+ax.set_title(f"Exp 133: one refund agent, seven architectures ({S['n_tasks']} tasks x {len(S['seeds'])} seeds per cell, Qwen3-8B)",
+             loc="left", fontsize=13, fontweight="bold")
+fig.tight_layout(); fig.savefig("figures/table_archs.png", dpi=150); plt.close(fig)
 print("figures written")
