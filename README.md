@@ -60,7 +60,7 @@ The pilot (P01-P12, 1 seed) is used only to check that faults fire, that all arc
 - **Pilot v0 discarded as a plumbing failure** (`results/runs_pilot_v0.jsonl`, kept for transparency): with vLLM's default JSON-schema decoding, Qwen3-8B sometimes emitted runaway whitespace (structured outputs >20,000 lines) until max_tokens, so `classify`/`decide` failed to parse in a large share of V2-V7 runs. Fix: vLLM restarted with `--structured-outputs-config '{"disable_any_whitespace": true}'` (and `--max-num-seqs 48`). No agent, task, fault or scoring code changed. The pilot was rerun on the same 12 pilot tasks (`results/runs_pilot.jsonl`, 252 runs, 138 s, 0 parse failures, every fault fired in 12/12 faulted runs per cell).
 - **Pilot readings** (12 tasks, 1 seed; `results/summary_pilot.json`): V1 faulted duplicate rate 71% vs V7 0%; model calls V1 6.0 vs V2 1.9 per clean run; prompt tokens 7,550 vs 643; V3 re-does ~1.9 model calls after a crash, V4 0; V4 crash duplicates 100%; clean success V1 67% vs V7 92%; V7 timeout success 92% vs V1 0%.
 - **Latency caveat found in the pilot**: runs execute 24 at a time against one vLLM server, so per-run latency includes GPU queueing (clean V2 vs V3 differed by 0.5 s with a CI of about +-12 s). H7 is therefore likely underpowered at 60 tasks. Predictions, margins and the H7 metric are **unchanged**; this is noted so an INCONCLUSIVE H7 is not a surprise.
-- Nothing else changes. Confirmatory run: T01-T60 (fresh), seeds 0, 1, 2, 24 workers, same server flags.
+- Nothing else changes. Confirmatory run: T01-T60 (fresh), seeds 0, 1, 2, same server flags. (Executed with 32 concurrent workers, not 24; see results/incident_double_driver.md for an aborted first attempt.)
 
 ## Files
 
