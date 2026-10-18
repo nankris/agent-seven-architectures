@@ -1,0 +1,6 @@
+Sun Oct 18 06:16:03 UTC 2026 attempt 1
+[colab] Creating session 'b8-133'...
+[colab] Allocation refused (precondition failed). This can mean too many active sessions, or a temporary usage or capacity limit for the requested runtime. Run `colab stop` to free up a session, wait and retry, or try a different accelerator.
+Sun Oct 18 06:21:07 UTC 2026 attempt 2
+[colab] Creating session 'b8-133'...
+[colab] Allocation refused (precondition failed). This can mean too many active sessions, or a temporary usage or capacity limit for the requested runtime. Run `colab stop` to free up a session, wait and retry, or try a different accelerator.
