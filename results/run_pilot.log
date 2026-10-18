@@ -1,0 +1,14 @@
+0 done, 252 to run
+[07:28:38] 25/252 rows  elapsed 41s
+[07:28:47] 50/252 rows  elapsed 50s
+[07:28:55] 75/252 rows  elapsed 58s
+[07:29:06] 100/252 rows  elapsed 68s
+[07:29:16] 125/252 rows  elapsed 78s
+[07:29:26] 150/252 rows  elapsed 88s
+[07:29:34] 175/252 rows  elapsed 96s
+[07:29:45] 200/252 rows  elapsed 107s
+[07:29:53] 225/252 rows  elapsed 116s
+[07:30:10] 250/252 rows  elapsed 132s
+[07:30:16] 252/252 rows  elapsed 138s
+PHASE DONE pilot 138s
+EXIT 0
