@@ -1,4 +1,4 @@
-"""Task set for experiment 133, scaled up from the source repo's food-delivery refund job
+"""Task set for this experiment, scaled up from the source repo's food-delivery refund job
 (brahim-guaali/graph-engineering-from-first-principles, services/data.py + agentkit/cases.py).
 
 Same six-clause policy, same kinds of cases (late, missing, spoiled, slightly late, cancelled,

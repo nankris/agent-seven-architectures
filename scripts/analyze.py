@@ -1,4 +1,4 @@
-"""Pre-registered analysis for Exp 133. Unit = task (mean over seeds), paired across archs.
+"""Pre-registered analysis for this experiment. Unit = task (mean over seeds), paired across archs.
 95% percentile bootstrap over tasks, 10,000 resamples, seed 0.
 
   python analyze.py results/runs_confirm.jsonl results/summary.json

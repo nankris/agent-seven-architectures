@@ -1,4 +1,4 @@
-"""Figures for Exp 133 from results/summary.json (+ hypotheses table). 150 dpi PNGs in figures/."""
+"""Figures for this experiment from results/summary.json (+ hypotheses table). 150 dpi PNGs in figures/."""
 import json
 import matplotlib
 matplotlib.use("Agg")
@@ -83,7 +83,7 @@ for (r, c), cell in tb.get_celld().items():
     cell.set_edgecolor(GRID)
     if r == 0: cell.set_text_props(fontweight="bold"); cell.set_facecolor("#ecebe7")
     elif c == 4: cell.set_facecolor(VC.get(rows[r - 1][4], SURF))
-ax.set_title(f"Exp 133: pre-registered hypotheses ({S['n_tasks']} fresh tasks x {len(S['seeds'])} seeds, 7 architectures x 3 conditions)",
+ax.set_title(f"Pre-registered hypotheses ({S['n_tasks']} fresh tasks x {len(S['seeds'])} seeds, 7 architectures x 3 conditions)",
              loc="left", fontsize=13, fontweight="bold")
 fig.tight_layout(); fig.savefig("figures/table.png", dpi=150); plt.close(fig)
 
@@ -102,7 +102,7 @@ for (r, c), cell in tb.get_celld().items():
     cell.set_edgecolor(GRID)
     if r == 0: cell.set_text_props(fontweight="bold"); cell.set_facecolor("#ecebe7"); cell.set_height(cell.get_height() * 1.4)
     if c == 0 and r > 0: cell.set_text_props(ha="left")
-ax.set_title(f"Exp 133: one refund agent, seven architectures ({S['n_tasks']} tasks x {len(S['seeds'])} seeds per cell, Qwen3-8B)",
+ax.set_title(f"One refund agent, seven architectures ({S['n_tasks']} tasks x {len(S['seeds'])} seeds per cell, Qwen3-8B)",
              loc="left", fontsize=13, fontweight="bold")
 fig.tight_layout(); fig.savefig("figures/table_archs.png", dpi=150); plt.close(fig)
 print("figures written")

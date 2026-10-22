@@ -4,7 +4,7 @@ by peeking at the task facts embedded in the prompt."""
 import json
 import re
 
-import agent133 as A
+import agents as A
 
 
 class StubLLM:

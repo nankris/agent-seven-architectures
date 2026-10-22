@@ -1,6 +1,6 @@
 #!/bin/bash
 # Runs ON the Colab VM: kill the pilot driver + vLLM, restart vLLM with the vm_setup.sh flags (no reinstall).
-cd /content/exp133
+cd /content/agents
 pkill -f run_phase.py; pkill -f "vllm.entrypoints"; sleep 15
 exec > restart.log 2>&1
 date

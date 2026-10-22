@@ -1,13 +1,13 @@
-# Exp 133 Colab run evidence (excerpts copied from the sandbox session, 18 Oct 2026 UTC)
+# Colab run evidence (excerpts copied from the run session, 18 Oct 2026 UTC)
 
 ## colab sessions (final, resumed run)
-[b8-133] gpu-l4-s-kkb-ass1b1-10xjkb5s7ozow | Hardware: L4 | Shape: Standard | Variant: GPU
+[agents-l4] gpu-l4-s-kkb-ass1b1-10xjkb5s7ozow | Hardware: L4 | Shape: Standard | Variant: GPU
 
 ## VM software (setup.log, 09:17 UTC)
 vllm 0.31.0 / langgraph 1.1.10 / langgraph-checkpoint-sqlite 3.1.2 / openai 2.54.0 / torch 2.13.0 / transformers 5.17.0
 vllm server: Qwen/Qwen3-8B-FP8, --max-model-len 8192 --enable-auto-tool-choice --tool-call-parser hermes --enable-prefix-caching --max-num-seqs 48 --seed 0 --structured-outputs-config {"backend": "xgrammar", "disable_any_whitespace": true}
 
-## resume check on the VM (hash of the 2,231 rows uploaded; matches the sandbox copy)
+## resume check on the VM (hash of the 2,231 rows uploaded; matches the local copy)
 1b37422530da3dbcf730982fb92ac5216f378f77  results/runs_confirm.jsonl
 2231 results/runs_confirm.jsonl
 
@@ -37,7 +37,7 @@ EXIT 0
 PHASE DONE confirm 664s
 EXIT 0
 
-## sandbox pull log
+## local pull log
 08:39 1076 rows; [08:39:01] 1050/3780 rows  elapsed 433s
 08:42 1637 rows; [08:42:13] 1550/3780 rows  elapsed 625s
 08:46 2231 rows; [08:45:45] 2150/3780 rows  elapsed 838s

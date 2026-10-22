@@ -1,4 +1,4 @@
-# Exp 133 writeup: one refund agent, seven LangGraph architectures, under failure
+# Writeup: one refund agent, seven LangGraph architectures, under failure
 
 **Verdict: H1 (primary) PROVEN.** Of the 8 pre-registered hypotheses, 7 are PROVEN and 1 is DISPROVEN (H6, "accuracy is a tie when nothing fails").
 
@@ -59,4 +59,4 @@ Other numbers from `results/summary.json` and the raw rows:
 
 ## Timing
 
-Estimated 165 min, actual about 230 min (setup with GPU allocation waits 65, pilot 20, confirmatory GPU run 135 wall clock including two VM losses, eval 5, writeup 25). GPU: NVIDIA L4 on Colab (three VMs in sequence). Compute: about 4.8 CU (account balance 131.81 to 127.05), under the 6 CU cap. The final resumed driver ran 1,549 runs in 664 s.
+Estimated 165 min, actual about 230 min (setup with GPU allocation waits 65, pilot 20, confirmatory GPU run 135 wall clock including two VM losses, eval 5, writeup 25). GPU: NVIDIA L4 on Colab (three VMs in sequence). Compute: about 4.8 CU (account balance 131.81 to 127.05). The final resumed driver ran 1,549 runs in 664 s.

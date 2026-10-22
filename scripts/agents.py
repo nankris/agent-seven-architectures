@@ -1,4 +1,4 @@
-"""Experiment 133: one refund agent, seven LangGraph architectures, under injected failures.
+"""One refund agent, seven LangGraph architectures, under injected failures.
 
 Adapted from brahim-guaali/graph-engineering-from-first-principles (MIT): same job (food-delivery
 refunds), same policy, same progression (loop -> typed graph -> supersteps -> checkpoints ->
@@ -46,7 +46,7 @@ MAX_STARTS = 3            # a run may be (re)started at most 3 times by the oute
 REACT_MAX_STEPS = 14      # model calls per process start for the loop
 TOOL_LATENCY = float(os.environ.get("TOOL_LATENCY", "0.25"))
 TIMEOUT_S = float(os.environ.get("TIMEOUT_S", "2.0"))
-CKPT_DIR = os.environ.get("CKPT_DIR", "/tmp/ckpt133")
+CKPT_DIR = os.environ.get("CKPT_DIR", "/tmp/ckpt_agents")
 ARCHS = ["V1_react", "V2_structured", "V3_parallel", "V4_checkpoint", "V5_approval", "V6_retries", "V7_full"]
 
 

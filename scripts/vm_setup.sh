@@ -1,6 +1,6 @@
 #!/bin/bash
 # Runs ON the Colab VM (launched detached). Installs vLLM + LangGraph, starts the Qwen3-8B server.
-cd /content/exp133
+cd /content/agents
 exec > setup.log 2>&1
 date; nvidia-smi
 pip install -q "vllm>=0.10" "langgraph>=1.0,<1.2" "langgraph-checkpoint-sqlite>=2.0" 2>&1 | tail -3
